@@ -1,0 +1,13 @@
+html
+  head
+    title Testing
+  body
+    #container
+      - each user in users
+        p= "name: " + user.user_name
+        li= "feed_id: " + user.id
+        li= "created: " + user.created
+        li= "deleted: " + user.modified
+        li= "type: " + user.feed_type
+        li: a(href=user.url) feed_url
+        li= "content: " + user.content
